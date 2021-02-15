@@ -6,6 +6,9 @@ from .models import Profile
 
 @receiver(post_save, sender=User)
 def post_save_create_profile(sender, instance, created, **kwargs):
+    """
+    creates a Profile each time a new User is created
+    """
     # print(f"sender: {sender}\ninstance: {instance}") #
     # sender: <class 'django.contrib.auth.models.User'>
     # instance: test2
